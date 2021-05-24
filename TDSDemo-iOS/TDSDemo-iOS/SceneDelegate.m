@@ -6,13 +6,16 @@
 //
 
 #import "SceneDelegate.h"
-
+#import <TapBootstrapSDK/TapBootstrapSDK.h>
 @interface SceneDelegate ()
 
 @end
 
 @implementation SceneDelegate
 
+- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts{
+    [TapBootstrap handleOpenURL:URLContexts.allObjects.firstObject.URL];
+}
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.

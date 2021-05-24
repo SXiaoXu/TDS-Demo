@@ -6,6 +6,8 @@
 //
 
 #import "AppDelegate.h"
+#import <TapLoginSDK/TapLoginSDK.h>
+#import <TapBootstrapSDK/TapBootstrap.h>
 
 @interface AppDelegate ()
 
@@ -16,8 +18,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    TapConfig *config = TapConfig.new;
+//    config.clientSecret = @"clientSecret";
+    config.clientId = @"BL1SbiKHHGGmivSEe8";
+    config.region = TapSDKRegionTypeCN; // TapSDKRegionTypeCN: 中国大陆  TapSDKRegionTypeIO: 国际
+    [TapBootstrap initWithConfig:config];
     return YES;
 }
+
 
 
 #pragma mark - UISceneSession lifecycle
