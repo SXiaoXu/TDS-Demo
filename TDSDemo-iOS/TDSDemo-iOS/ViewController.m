@@ -62,6 +62,7 @@
 //    [dbButton addTarget:self action:@selector(toTapDB:) forControlEvents:UIControlEventTouchUpInside];
 //    [self.view addSubview:dbButton];
 
+
     
     [self initTapSDK];
 
@@ -70,12 +71,27 @@
     
     //初始化SDK
     TapConfig *config = TapConfig.new;
-    config.clientId = @"0RiAlMny7jiz086FaU";
+    config.clientId = @"BL1SbiKHHGGmivSEe8";
     config.region = TapSDKRegionTypeCN;
     [TapBootstrap initWithConfig:config];
-    //设置登录回调
+    
+
     [TapBootstrap registerLoginResultDelegate:self];
     [TapBootstrap registerUserStatusChangedDelegate:self];
+    
+    AccessToken *accessToken = [TapBootstrap getCurrentToken];
+    if (accessToken == nil) {
+        // 未登录
+        NSLog (@" 未登录");
+
+    } else {
+        // 已登录
+        NSLog (@"已登录");
+
+    }
+    //开启动态
+    [TapMoment initWithClientId:config.clientId];
+    [TapMoment setDelegate:self];
     
 }
 #pragma mark - TapBootstrap
@@ -150,7 +166,7 @@
 #pragma mark - DB相关
 
 //- (void)toTapDB:(UIButton *)button {
-//    
+//
 //    TapDBViewController *dbController = [TapDBViewController new];
 ////    [self showViewController:dbController sender:nil];
 //    [self presentViewController:dbController animated:YES completion:nil];
