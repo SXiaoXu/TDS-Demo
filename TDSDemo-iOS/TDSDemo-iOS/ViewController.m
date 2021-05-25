@@ -10,7 +10,7 @@
 #import <TapMomentSDK/TapMomentSDK.h>
 //#import "TapDBViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<TapLoginResultDelegate, TapMomentDelegate, TapUserStatusChangedDelegate>
 
 @end
 
@@ -72,6 +72,7 @@
     //初始化SDK
     TapConfig *config = TapConfig.new;
     config.clientId = @"BL1SbiKHHGGmivSEe8";
+    config.clientSecret = @"NQDo7btXA6ZXmXNaMM3SvqOiicV5OKtqlHYzDxyL";
     config.region = TapSDKRegionTypeCN;
     [TapBootstrap initWithConfig:config];
     
@@ -83,11 +84,9 @@
     if (accessToken == nil) {
         // 未登录
         NSLog (@" 未登录");
-
     } else {
         // 已登录
         NSLog (@"已登录");
-
     }
     //开启动态
     [TapMoment initWithClientId:config.clientId];
@@ -171,4 +170,8 @@
 ////    [self showViewController:dbController sender:nil];
 //    [self presentViewController:dbController animated:YES completion:nil];
 //}
+- (void)onMomentCallbackWithCode:(NSInteger)code msg:(NSString *)msg
+{
+    NSLog (@"msg:%@, code:%li" ,msg, (long)code);
+}
 @end
