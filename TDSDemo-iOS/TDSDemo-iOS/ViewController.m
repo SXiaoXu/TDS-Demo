@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import <TapBootstrapSDK/TapBootstrapSDK.h>
 #import <TapMomentSDK/TapMomentSDK.h>
-//#import "TapDBViewController.h"
+#import "TapDBViewController.h"
 
 @interface ViewController ()<TapLoginResultDelegate, TapMomentDelegate, TapUserStatusChangedDelegate>
 
@@ -55,12 +55,14 @@
     [momentRedPoint addTarget:self action:@selector(taptapMomentRedPoint:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:momentRedPoint];
     
-//    UIButton *dbButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 550, 300, 50)];
-//    dbButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-//    [dbButton setTitle:@"进入TapDB测试" forState:UIControlStateNormal];
-//    [dbButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
-//    [dbButton addTarget:self action:@selector(toTapDB:) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:dbButton];
+    UIButton *dbButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 550, 300, 50)];
+    dbButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [dbButton setTitle:@"进入TapDB测试" forState:UIControlStateNormal];
+    [dbButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [dbButton addTarget:self action:@selector(toTapDB:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:dbButton];
+    
+  
 
 
     
@@ -164,12 +166,15 @@
 }
 #pragma mark - DB相关
 
-//- (void)toTapDB:(UIButton *)button {
-//
-//    TapDBViewController *dbController = [TapDBViewController new];
-////    [self showViewController:dbController sender:nil];
-//    [self presentViewController:dbController animated:YES completion:nil];
-//}
+- (void)toTapDB:(UIButton *)button {
+
+    TapDBViewController *dbController = [TapDBViewController new];
+//    [self showViewController:dbController sender:nil];
+    [self presentViewController:dbController animated:YES completion:nil];
+    
+    
+    
+}
 - (void)onMomentCallbackWithCode:(NSInteger)code msg:(NSString *)msg
 {
     NSLog (@"msg:%@, code:%li" ,msg, (long)code);

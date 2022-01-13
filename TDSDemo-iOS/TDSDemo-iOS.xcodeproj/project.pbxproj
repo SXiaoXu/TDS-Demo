@@ -38,6 +38,8 @@
 		5E70BAB3265CDA4A006AA828 /* TapFriendResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5E70BAA8265CDA4A006AA828 /* TapFriendResource.bundle */; };
 		5E70BAB4265CDA4A006AA828 /* TapCommonResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5E70BAA9265CDA4A006AA828 /* TapCommonResource.bundle */; };
 		5E70BAB5265CDA4A006AA828 /* TapFriendSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E70BAAA265CDA4A006AA828 /* TapFriendSDK.framework */; };
+		5E92B100265E1D7200553818 /* TapFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E92B0FC265E1D7200553818 /* TapFriendsViewController.m */; };
+		5E92B101265E1D7200553818 /* TapDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E92B0FE265E1D7200553818 /* TapDBViewController.m */; };
 		5EB9227D265649FF00BCF396 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9227C265649FF00BCF396 /* AppDelegate.m */; };
 		5EB92283265649FF00BCF396 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB92282265649FF00BCF396 /* ViewController.m */; };
 		5EB92286265649FF00BCF396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB92284265649FF00BCF396 /* Main.storyboard */; };
@@ -91,6 +93,10 @@
 		5E70BAA8265CDA4A006AA828 /* TapFriendResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TapFriendResource.bundle; sourceTree = "<group>"; };
 		5E70BAA9265CDA4A006AA828 /* TapCommonResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TapCommonResource.bundle; sourceTree = "<group>"; };
 		5E70BAAA265CDA4A006AA828 /* TapFriendSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapFriendSDK.framework; sourceTree = "<group>"; };
+		5E92B0FC265E1D7200553818 /* TapFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapFriendsViewController.m; sourceTree = "<group>"; };
+		5E92B0FD265E1D7200553818 /* TapFriendsViewControlle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapFriendsViewControlle.h; sourceTree = "<group>"; };
+		5E92B0FE265E1D7200553818 /* TapDBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDBViewController.m; sourceTree = "<group>"; };
+		5E92B0FF265E1D7200553818 /* TapDBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDBViewController.h; sourceTree = "<group>"; };
 		5EB92278265649FF00BCF396 /* TDSDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TDSDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB9227B265649FF00BCF396 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EB9227C265649FF00BCF396 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -217,6 +223,10 @@
 		5EB9227A265649FF00BCF396 /* TDSDemo-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				5E92B0FF265E1D7200553818 /* TapDBViewController.h */,
+				5E92B0FE265E1D7200553818 /* TapDBViewController.m */,
+				5E92B0FD265E1D7200553818 /* TapFriendsViewControlle.h */,
+				5E92B0FC265E1D7200553818 /* TapFriendsViewController.m */,
 				5EB9227B265649FF00BCF396 /* AppDelegate.h */,
 				5EB9227C265649FF00BCF396 /* AppDelegate.m */,
 				5EB92281265649FF00BCF396 /* ViewController.h */,
@@ -381,6 +391,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E92B100265E1D7200553818 /* TapFriendsViewController.m in Sources */,
+				5E92B101265E1D7200553818 /* TapDBViewController.m in Sources */,
 				5EB92283265649FF00BCF396 /* ViewController.m in Sources */,
 				5EB9227D265649FF00BCF396 /* AppDelegate.m in Sources */,
 				5EB9228E26564A0000BCF396 /* main.m in Sources */,
